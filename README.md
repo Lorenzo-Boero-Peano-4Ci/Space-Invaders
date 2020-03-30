@@ -1,2 +1,2 @@
-# lorenzo.boero02-gmail.com
+# Space Invaders
 Space Invaders Multitreading
