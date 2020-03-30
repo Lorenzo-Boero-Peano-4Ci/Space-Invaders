@@ -14,20 +14,24 @@ import java.awt.Graphics;
  * @author admin
  */
 public class Intro extends Spazio {
+    private int i = 0;
+    void run() throws InterruptedException {
+       setBackground (Color.BLACK);
+       setSize(800, 600);
+               
+        for(i=100;i>=0;i-=1) {
+            System.out.println("i: " + i);
+            this.repaint();
+            Thread.sleep(50);
+        }
+    }
      @Override
         public void paint(Graphics g) {
-            // scrivi nel canvas la scritta in Rosso 
             g.setColor(Color.CYAN);
-            // Seleziona i Font della scritta (Bold) e la dimensione dei caratteri (40)
-            g.setFont(new Font("Bold", Font.PLAIN, 40));
-            // Scrivi partendo dalla posizione x=100 e y=100
-            g.drawString("Space Invaders", 100, 100);
-            g.setFont(new Font("Bold", Font.PLAIN, 15));
-            g.drawString("          by Lorenzo Boero", 110, 120);            
+            g.setFont(new Font("Bold", Font.PLAIN, 40+ i));
+            g.drawString("Space Invaders", 100+i, 100+i);
+            g.setFont(new Font("Bold", Font.PLAIN, 15+i));
+            g.drawString("          by Lorenzo Boero", 110+i+i, 120+i+i);            
         }
-
-    void run() {
         
     }
-    
-}
