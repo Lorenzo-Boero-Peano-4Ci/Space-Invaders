@@ -13,11 +13,10 @@ import java.awt.Color;
  * @author admin
  */
 public class Space extends Canvas {
-     Space() {
-       System.out.println("Setting canvas background and dimentions ");
-
+     public Space() {
+       System.out.println("Imposta la schermata ");
        setBackground (Color.BLACK);
-       setSize(800, 600);
+       setSize(800, 500);
     }
     
 }
